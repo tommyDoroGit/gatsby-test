@@ -17,7 +17,7 @@ export default class Navigation extends React.Component {
     render() {
         return (
         <div>
-        
+        <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/skills/">Skills</StyledLink>
         <StyledLink to="/projects/">Projects</StyledLink>
         
