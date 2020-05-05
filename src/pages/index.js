@@ -3,14 +3,39 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+class Hero extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {welcome: ""};
+    this.onLoad = this.onLoad.bind(this);
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.onLoad(),
+      1000
+    );
+  }
+
+  onLoad() {
+    this.setState({
+      welcome: "Hello I'm a Front End Web Developer from Perth, Western Australia."
+    });
+  }
+
+  render() {
+    return(
+      <>
+      <p>{this.state.welcome}</p> 
+      </> 
+    )
+  }
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Tom Dorozenko's site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-    </div>
+    <Hero/>  
   </Layout>
 )
 

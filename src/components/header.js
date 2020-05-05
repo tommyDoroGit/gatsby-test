@@ -1,17 +1,28 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Navigation from "./navigation"
 import Logo from "./logo"
+import styled from "styled-components"
 
+const StyledHeader = styled.header`
+  display: flex;
+  flex-direction: row;
+
+  .logo {
+    width: 50%;
+  }
+
+  .mainNav {
+    width: 100%;
+  }
+
+`;
 
 const Header = ({ siteTitle }) => (
-  <header>
-    <div>
-      <Logo />
-      <Navigation />
-    </div>
-  </header>
+  <StyledHeader>
+      <Logo className="logo" />
+      <Navigation className="mainNav" />
+  </StyledHeader>
 ) 
 
 Header.propTypes = {
