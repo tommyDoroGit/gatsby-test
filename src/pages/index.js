@@ -3,6 +3,10 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import {motion} from "framer-motion";
+
+
+
 class Hero extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +30,12 @@ class Hero extends React.Component {
   render() {
     return(
       <>
-      <p>{this.state.welcome}</p> 
+      <motion.p 
+      animate={{x:100}}
+      transition={{ ease: "easeOut", duration: 2 }}
+      >
+        {this.state.welcome}
+        </motion.p> 
       </> 
     )
   }
