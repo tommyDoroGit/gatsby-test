@@ -10,9 +10,16 @@ class Hero extends React.Component {
     this.onLoad = this.onLoad.bind(this);
   }
 
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.onLoad(),
+      1000
+    );
+  }
+
   onLoad() {
     this.setState({
-      welcome: this.props.welcome
+      welcome: "Hello I'm a Front End Web Developer from Perth, Western Australia."
     });
   }
 
@@ -28,7 +35,7 @@ class Hero extends React.Component {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero welcome="How cool"/>  
+    <Hero/>  
   </Layout>
 )
 
