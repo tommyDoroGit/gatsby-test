@@ -15,12 +15,6 @@ const Nav = styled.nav`
 `;
 
 export default class Navigation extends React.Component {
-    /*
-    constructor(props) {
-        super(props);
-        this.state = {display: none}
-    }
-    */
 
     render() {
         return (
@@ -28,6 +22,7 @@ export default class Navigation extends React.Component {
             <StyledLink to="/">Home</StyledLink>
             <StyledLink to="/skills/">Skills</StyledLink>
             <StyledLink to="/projects/">Projects</StyledLink>
+            <StyledLink to="/contact/">Contact</StyledLink>
         </Nav>
         )
     }

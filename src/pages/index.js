@@ -35,7 +35,7 @@ class Hero extends React.Component {
       transition={{ ease: "easeOut", duration: 2 }}
       >
         {this.state.welcome}
-        </motion.p> 
+      </motion.p> 
       </> 
     )
   }

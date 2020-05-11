@@ -13,6 +13,17 @@ import Header from "./header"
 import Footer from "./footer"
 import "./layout.scss"
 
+import styled from "styled-components"
+
+const FrameWork = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+`;
+
+const Main = styled.main`
+  height: 80vh;
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,10 +39,12 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-      </div>
-      <Footer /> 
+        <Main>
+          <FrameWork>
+          {children}
+          </FrameWork>  
+        </Main>
+        <Footer />
     </>
   )
 }

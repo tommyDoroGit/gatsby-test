@@ -4,6 +4,7 @@ import styled from "styled-components"
 const FooterStyles = styled.footer`
     background-color: #ffffff; 
     padding: 20px 0;
+    height: 10vh;
 `;
 
 const Footer = () => (
