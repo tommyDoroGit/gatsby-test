@@ -5,6 +5,8 @@ import SEO from "../components/seo"
 
 import styled from "styled-components"
 
+import PageTitle from "../components/title"
+
 const Col = styled.div`
   width: 50%;
 `; 
@@ -12,12 +14,12 @@ const Col = styled.div`
 const ThirdPage = () => (
   <Layout>
     <SEO title="Projects" />
-    <Col style>
-      <h1>Projects</h1>
-      <p>These are some of the things I've picked up over the years.</p>
+    <Col>
+      <PageTitle title="Projects" />
+      
     </Col>
     <Col>
-      <p>This is a test</p>
+      <img src="https://source.unsplash.com/random/1920x800" alt="" />
     </Col>
   </Layout>
 )

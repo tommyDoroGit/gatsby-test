@@ -5,6 +5,15 @@ import SEO from "../components/seo"
 
 import {motion} from "framer-motion";
 
+import PageTitle from "../components/title"
+
+import styled from "styled-components"
+
+
+const Col = styled.div`
+  width: 50%;
+`; 
+
 
 
 class Hero extends React.Component {
@@ -44,7 +53,12 @@ class Hero extends React.Component {
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Hero/>  
+    <Col>
+      <PageTitle title="This is my Site" /> 
+    </Col>
+    <Col>
+      <Hero/> 
+    </Col> 
   </Layout>
 )
 
